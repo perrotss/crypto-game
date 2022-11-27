@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <form onsubmit="return false;">
+    <label for="gameHash"
+      >Game's Hash: (be sure to use a valid hash to get the real values)</label
+    >
+    <br />
+    <input type="text" name="gameHash" id="gameHash" />
+    <br />
+    <br />
+    <label for="gameAmount">Amount of game to show from this hash:</label>
+    <br />
+    <input
+      type="number"
+      min="1"
+      step="1"
+      name="gameAmount"
+      id="gameAmount"
+      value="100"
+    />
+    <br />
+    <br />
+    <label for="baseBet">Base bet</label>
+    <br />
+    <input type="number" min="1" step="1" name="test" id="baseBet" value="1" />
+    <br />
+    <br />
+    <label for="increase">Increase</label>
+    <br />
+    <input
+      type="number"
+      min="1"
+      step="1"
+      name="test"
+      id="betIncrease"
+      value="2.0"
+    />
+    <br />
+    <br />
+    <label for="increase">cashout</label>
+    <br />
+    <input
+      type="number"
+      min="1"
+      step="1"
+      name="test"
+      id="cashout"
+      value="2.0"
+    />
+    <br />
+    <br />
+    <label for="increase">initial coins</label>
+    <br />
+    <input type="number" min="1" step="1" name="test" id="coins" value="1000" />
+    <br />
+    <button onclick="refreshTable();">Refresh Table</button>
+  </form>
+
+  <table id="hashTable">
+    <thead>
+      <tr>
+        <th>Game's hash</th>
+        <th>Crash</th>
+        <th>Bet Amount</th>
+        <th>Coins</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/sha256.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/hmac.js"></script>
+</html>
